@@ -34,7 +34,7 @@ public class WhenHomePageIsLoaded {
 		
 		System.out.println("Bigin test!");
 		
-		SearchResult result = pageHeader.search("new");
+		SearchResult result = pageHeader.search("doit");
 		
 		System.out.println(result.toString());
 		
