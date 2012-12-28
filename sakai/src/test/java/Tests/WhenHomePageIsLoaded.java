@@ -34,7 +34,7 @@ public class WhenHomePageIsLoaded {
 		
 		System.out.println("Bigin test!");
 		
-		SearchResult result = pageHeader.search("sakai");
+		SearchResult result = pageHeader.search("123456");
 		
 		System.out.println(result.toString());
 		
