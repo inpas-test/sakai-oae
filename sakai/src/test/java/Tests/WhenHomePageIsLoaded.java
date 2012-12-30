@@ -7,10 +7,11 @@ import org.junit.Test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 
 
 import Pages.PageHeader;
-import WebElements.SearchResult;
+//import WebElements.SearchResult;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
@@ -34,11 +35,9 @@ public class WhenHomePageIsLoaded {
 		
 		System.out.println("Bigin test!");
 		
-		SearchResult result = pageHeader.search("sakai");
-		
-		System.out.println(result.toString());
-		
-		assertThat(result.toString(), containsString("message"));
+		pageHeader.search("Тест");
+				
+		assertThat(pageHeader.toString(), containsString("message"));
 
 	}
 

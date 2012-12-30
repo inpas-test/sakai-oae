@@ -1,10 +1,8 @@
 package Pages;
 
 import org.openqa.selenium.WebDriver;
-
 import WebElements.LoginForm;
 import WebElements.SearchForm;
-import WebElements.SearchResult;
 
 
 import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
@@ -13,7 +11,10 @@ public class PageHeader{
 
 	private SearchForm searchForm;
 	
+	
 	private LoginForm loginForm;
+	
+	
 	
 	public PageHeader (WebDriver driver){
 		
@@ -21,10 +22,10 @@ public class PageHeader{
 	}
 	
 
-  	public SearchResult search(String request){
+  	public void search(String request){
 
 		
-		return searchForm.search(request);
+		searchForm.search(request);
 		
 	}
 	

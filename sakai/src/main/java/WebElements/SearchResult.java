@@ -1,16 +1,34 @@
 package WebElements;
 
-import org.openqa.selenium.support.FindBy;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 
-import ru.yandex.qatools.htmlelements.annotations.Block;
-import ru.yandex.qatools.htmlelements.annotations.Name;
-import ru.yandex.qatools.htmlelements.element.HtmlElement;
+public class SearchResult extends TypifiedElement{
 
+	public SearchResult(WebElement wrappedElement) {
+		super(wrappedElement);
+	}
 
-@Name("Результат поиска")
-@Block(@FindBy(id = "searchall_results_container"))
-public class SearchResult extends HtmlElement{
-
+	private List<WebElement> getItmes(){
+		
+		return getWrappedElement().findElements(By.xpath("//li"));
+		
+	}
+	
+	public void test(){
+		
+		for(WebElement item : getItmes()){
+			
+			System.out.println(item.getText());
+			
+		}
+		throw new NoSuchElementException();
+	}
 	
 }
