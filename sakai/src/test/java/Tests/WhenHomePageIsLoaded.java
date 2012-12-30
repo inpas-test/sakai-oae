@@ -25,7 +25,7 @@ public class WhenHomePageIsLoaded {
 	@Before
 	public void LoadHomePage(){
 		
-		driver.get("http://uos-centos:8080/");
+		driver.get("http://localhost:8080/");
 		
 	}
 	
@@ -34,7 +34,7 @@ public class WhenHomePageIsLoaded {
 		
 		System.out.println("Bigin test!");
 		
-		SearchResult result = pageHeader.search("asdfasd");
+		SearchResult result = pageHeader.search("sakai");
 		
 		System.out.println(result.toString());
 		
@@ -45,7 +45,7 @@ public class WhenHomePageIsLoaded {
 	@After
 	public void closePage(){
 
-		driver.quit();
+		//driver.quit();
 		
 	}
 }

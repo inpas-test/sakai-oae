@@ -3,6 +3,9 @@
 	<name>sakai</name>
 	<comment></comment>
 	<projects>
+		<project>htmlelements</project>
+		<project>htmlelements-java</project>
+		<project>htmlelements-matchers</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
