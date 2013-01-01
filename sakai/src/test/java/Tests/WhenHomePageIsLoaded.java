@@ -1,17 +1,17 @@
 package Tests;
 
+import java.io.Console;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
-
 
 import Pages.PageHeader;
-//import WebElements.SearchResult;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
@@ -30,13 +30,16 @@ public class WhenHomePageIsLoaded {
 		
 	}
 	
+	
 	@Test
-	public void aUserShouldSearhByString(){
+	public void aUserShouldSearhByString() throws InterruptedException{
 		
 		System.out.println("Bigin test!");
 		
 		pageHeader.search("Тест");
-				
+		
+		pageHeader.viewResults();
+		
 		assertThat(pageHeader.toString(), containsString("message"));
 
 	}
@@ -44,7 +47,7 @@ public class WhenHomePageIsLoaded {
 	@After
 	public void closePage(){
 
-		//driver.quit();
+		driver.quit();
 		
 	}
 }

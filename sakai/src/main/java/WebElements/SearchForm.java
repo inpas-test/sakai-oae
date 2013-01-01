@@ -9,7 +9,6 @@ import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 
-
 @Name("Форма поиска")
 @Block(@FindBy(className = "s3d-search-container"))
 public class SearchForm extends HtmlElement{
@@ -21,18 +20,14 @@ public class SearchForm extends HtmlElement{
 	@Name("Кнопка поиска")
 	@FindBy(xpath = "/html/body/div[2]/div/div/div/div/div[2]/div/button")
 	private Button searchButton;
-/*	
-	@Name("Результат поиска (список)")
-	@FindBy(id = "searchall_results_container")
-	private SearchResult searchResult;
-*/	
+	
 
-	public void search (String request){
+
+	public void search (String request) throws InterruptedException{
 		
 		requestInput.sendKeys(request);
 		
 		searchButton.click();
-
 
 	}
 
