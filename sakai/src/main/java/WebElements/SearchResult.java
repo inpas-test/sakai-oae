@@ -1,4 +1,4 @@
-package WebElements;
+п»їpackage WebElements;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -13,7 +13,7 @@ import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 
 
-@Name("Блок результата поиска")
+@Name("Р‘Р»РѕРє СЂРµР·СѓР»СЊС‚Р°С‚Р° РїРѕРёСЃРєР°")
 @Block(@FindBy(id = "searchall_results_container"))
 public class SearchResult extends HtmlElement{
 
@@ -23,13 +23,13 @@ public class SearchResult extends HtmlElement{
 		
 	}
 	
-	public void test(){
+	public void print(){
 		
 		try{
 			
-			for(WebElement currentitem : getItems() ){
+			for(WebElement currentItem : getItems() ){
 				
-				System.out.println(currentitem.getText());
+				System.out.println(currentItem.getText());
 				
 			}
 			

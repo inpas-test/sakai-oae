@@ -1,4 +1,4 @@
-package WebElements;
+п»їpackage WebElements;
 
 import org.openqa.selenium.support.FindBy;
 
@@ -9,15 +9,15 @@ import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 
-@Name("Форма поиска")
+@Name("Р¤РѕСЂРјР° РїРѕРёСЃРєР°")
 @Block(@FindBy(className = "s3d-search-container"))
 public class SearchForm extends HtmlElement{
 	
-	@Name("Поле ввода для поиска")
+	@Name("РџРѕР»Рµ РІРІРѕРґР° РґР»СЏ РїРѕРёСЃРєР°")
 	@FindBy(className = "s3d-search-inputfield")
 	private TextInput requestInput;
 	
-	@Name("Кнопка поиска")
+	@Name("РљРЅРѕРїРєР° РїРѕРёСЃРєР°")
 	@FindBy(xpath = "/html/body/div[2]/div/div/div/div/div[2]/div/button")
 	private Button searchButton;
 	

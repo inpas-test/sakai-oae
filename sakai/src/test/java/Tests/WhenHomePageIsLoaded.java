@@ -1,4 +1,4 @@
-package Tests;
+ï»¿package Tests;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,11 +47,10 @@ public class WhenHomePageIsLoaded {
 		
 		System.out.println("Bigin test!");
 		
-		pageHeader.search("Òåñò");
+		pageHeader.search("Ğ¢ĞµÑÑ‚");
 		
 		pageHeader.viewResults();
-		
-		assertThat(pageHeader.toString(), containsString("message"));
+
 
 	}
 

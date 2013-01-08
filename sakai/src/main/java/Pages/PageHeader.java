@@ -1,4 +1,4 @@
-package Pages;
+﻿package Pages;
 
 import org.openqa.selenium.WebDriver;
 
@@ -30,7 +30,7 @@ public class PageHeader{
   	
   	public void viewResults(){
   		
-  		searchResult.test();
+  		searchResult.print();
   	}
 	
 
