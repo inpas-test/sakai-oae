@@ -28,7 +28,8 @@ public class WhenHomePageIsLoaded {
 	@Before
 	public void LoadHomePage(){
 		
-		driver.get("http://localhost:8080/");
+		driver.get("http://uos-centos:8080");
+		driver.manage().window().maximize();
 		
 	}
 	
