@@ -2,7 +2,7 @@
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
+//import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -27,9 +27,16 @@ public class WhenHomePageIsLoaded {
 	
 	@Before
 	public void LoadHomePage(){
-		
-		driver.get("http://uos-centos:8080");
-		driver.manage().window().maximize();
+		try{
+			
+			driver.get("http://uos-centos:8080");
+			//driver.wait();
+			driver.manage().window().maximize();
+			
+		}catch(Exception e){
+			
+			System.out.println(e.getMessage());
+		}
 		
 	}
 	
@@ -43,15 +50,22 @@ public class WhenHomePageIsLoaded {
 		
 	}
 	
-	@Ignore
+	@Test
 	public void aUserShouldSearhByString() throws InterruptedException{
 		
-		System.out.println("Bigin test!");
+		try{
 		
-		pageHeader.search("Тест");
+			System.out.println("Bigin test!");
 		
-		pageHeader.viewResults();
-
+			pageHeader.search("sakai");
+		
+			pageHeader.viewResults();
+			
+		}catch(Exception e){
+			
+			System.out.println(e.getMessage());
+			
+		} 
 
 	}
 
