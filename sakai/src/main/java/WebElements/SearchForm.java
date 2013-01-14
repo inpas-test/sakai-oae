@@ -1,4 +1,4 @@
-﻿package WebElements;
+package WebElements;
 
 import org.openqa.selenium.support.FindBy;
 

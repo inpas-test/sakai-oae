@@ -1,4 +1,4 @@
-﻿package WebElements;
+package WebElements;
 
 import java.util.List;
 import java.util.NoSuchElementException;
